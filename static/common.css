@@ -11,7 +11,7 @@
     height: 40px !important;
 }
 
-.img {  
-    width: 450px;
-    height: 800px;
+.small {  
+    width: 450px !important;
+    height: 800px !important;
 }
