@@ -7,7 +7,15 @@
     display: inline-block;
 }
 
-.small {
-    object-fit: contain;
-    width: 450px !important;
+.download-badge {
+    height: 40px !important;
+}
+
+.p-img {
+    max-width: 1600px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
 }
