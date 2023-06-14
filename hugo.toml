@@ -1,0 +1,14 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'YWallet'
+
+[module]
+[[module.imports]]
+  path = 'github.com/McShelby/hugo-theme-relearn'
+
+[markup]
+  [markup.highlight]
+    guessSyntax = false
+
+[outputs]
+  section = ["HTML", "RSS", "PRINT"]
