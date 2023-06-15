@@ -11,14 +11,6 @@ sequenceDiagram
     ZECLock->>Bob: Bob uses his Secret and Alice Secret, redeems 1000 ZEC
 ```
 
-- Same number of transactions: 4
-- BTCLock is a multi-sig & time locked address
-- ZECLock is a shielded multi-sig address (FROST like)
-
-Addresses are determined off-chain and unsigned transactions are built
-beforehand. The signatures may be missing or the transactions are simply
-not yet published.
-
 ## Exchange 1: Bob sends a signature adaptor
 
 - Bob gives a signature adaptor that unlocks the BTC
@@ -35,4 +27,3 @@ and forms a sigature for BTC Lock
 - Bob combines his secret with Alice secret
 - Bob has the secret key to ZEC Lock
 - Bob can redeem the ZEC (or leave it there)
-

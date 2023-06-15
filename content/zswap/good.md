@@ -24,7 +24,7 @@ not yet published.
     1. Multi-sig Alice + Bob
     2. OR enough time has passed (time-lock) and Multi-sig Alice + Bob
     pre-signed
-- 1 & 2 use different public keys therefore the signatures cannot be swapped
+- 1 & 2 are signatures to different tx and therefore cannot be swapped
 - Alice wants to redeem the BTC
 - Alice can sign 1. with her secret key
 - Bob needs to sign 1. as well
@@ -32,7 +32,7 @@ not yet published.
 
 ## Tx 2: Fund the ZEC lock
 
-- Alice notices Tx. 1 and posts Tx 2 on Zcash blockchain
+- Alice notices Tx. 1 and posts Tx. 2 on Zcash blockchain
 - nsk, nk, dk, ovk are pre-agreed
 - ask = secret Alice + secret Bob
 - *same secret* as for Bitcoin
@@ -41,4 +41,4 @@ not yet published.
 - Bob needs Alice secret key
 - **Alice does not want to give her secret key without getting BTC**
 
-This issue can be solved with Signature Adaptors
+This issue can be solved with [Signature Adaptors]({{< relref "sigadaptor" >}})

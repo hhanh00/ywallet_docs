@@ -12,4 +12,3 @@ sequenceDiagram
     BTCLock->>Alice: reveals her Secret, redeems 1 BTC
     ZECLock->>Bob: Bob uses his Secret and Alice Secret, redeems 1000 ZEC
 ```
-

@@ -1,6 +1,6 @@
 ---
 title: Signature Adaptors
-weight: 60
+weight: 67
 ---
 
 ## Problem
@@ -20,21 +20,18 @@ sequenceDiagram
     ZECLock->>Bob: Bob uses Secret A + Secret B and redeem 1000 ZEC
 ```
 
-## Implementation
+## Schnorr Signature
 
-### Schnorr Signature
+### Sign
 
 ```math
-Let's say we want to sign the message with hash $m$. We have the secret key $p$ matching the 
-public key $P$ such as $P = p.G$ (where $G$ is the Generator point)
+Let's say we want to sign the message with hash $m$. We have the secret key $p$ matching the public key $P$ such as $P = p.G$ (where $G$ is the Generator point).
+First we randomly pick a new secret $r$ and compute the public key for it. 
+$$R = r.G$$
 ```
 
 ```math
-First we *randomly* pick a new secret $r$ and compute the public key for it: $R = r.G$
-```
-
 Then we use the hashing function $H$ and calculate
-```math
 $$s = r + H(R|m).p $$
 ```
 
@@ -42,8 +39,10 @@ $$s = r + H(R|m).p $$
 The signature is $(s, R)$
 ```
 
-To verify, we need to have the message, the public key and the signature:
+### Verify
+
 ```math
+To verify, we need to have the message, the public key and the signature:
 $(m, s, R, P)$
 ```
 
@@ -59,7 +58,7 @@ The signature is valid if $X = s.G$
 ## Signature Adaptor
 
 ```math
-Bob wants the Secret A, $t$ from Alice in exchange for a signature of BTC lock.
+Bob wants the secret key $t$ from Alice in exchange for a signature of BTC lock.
 He knows the public key $T$.
 ```
 
@@ -71,7 +70,7 @@ Bob makes a "signature" with a $R + T$ in the hash instead of $R$.
 $$ s = r + H(R+T|m).p $$
 ```
 
-This is *NOT* a signature because it will not validate since it should be either
+This is *NOT* a signature because it will not validate because it should be either
 ```math
 $$ s_x = r + t + H(R+T|m).p $$
 $$ s_y = r  + H(R|m).p $$

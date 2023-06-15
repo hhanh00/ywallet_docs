@@ -7,9 +7,9 @@ When Bob extracted the secret key A from Alice's signature,
 we assumed that he would be able to use it to redeem the ZEC.
 
 However, without enforcing that the secret key used in BTC Lock
-is also used in ZEC Lock, the ZSwap falls apart.
+is also used in ZEC Lock, the Zwap falls apart.
 
-In fact, Bob only see public points P on secp256k1 and ak on Jubjub or Pallas.
+In fact, Bob only see public points on secp256k1 and on Jubjub (or Pallas).
 There is no guarantee that they were generated from the same secret key
 by Alice.
 
