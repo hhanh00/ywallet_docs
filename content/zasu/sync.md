@@ -33,9 +33,4 @@ Return the synchronization point to an earlier height.
 
 Rescan all the transactions from this wallet. 
 
-{{% notice info %}}
-Equivalent to a full import but can run thousands of times faster with Zasu.
-{{% /notice %}}
-
-{{< youtube VYoAWAxA2E0 >}}
-
+See [Rescan]({{< relref "rescan" >}})
